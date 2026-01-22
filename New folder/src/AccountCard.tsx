@@ -1,7 +1,7 @@
 import { Account, Proxy } from "@/types/account";
 import { StatusIndicator } from "./StatusIndicator";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card } from "@/ui/card";
+import { Button } from "@/ui/button";
 import { ChevronDown, ChevronRight, Trash2, Copy, Check, Settings } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
