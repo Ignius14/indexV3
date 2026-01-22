@@ -1,17 +1,17 @@
 import { useState, useCallback } from "react";
 import { useAccounts } from "@/hooks/useAccounts";
 import { useAccountStatus, StatusResponse } from "@/hooks/useAccountStatus";
-import { AccountCard } from "@/components/AccountCard";
-import { AccountDetailsModal } from "@/components/AccountDetailsModal";
-import { AddAccountModal } from "@/components/AddAccountModal";
-import { ProxyModal } from "@/components/ProxyModal";
-import { SpawnerSection } from "@/components/SpawnerSection";
-import { StatusResponseModal } from "@/components/StatusResponseModal";
-import { Header } from "@/components/Header";
-import { Button } from "@/components/ui/button";
+import { AccountCard } from "@/AccountCard";
+import { AccountDetailsModal } from "@/AccountDetailsModal";
+import { AddAccountModal } from "@/AddAccountModal";
+import { ProxyModal } from "@/ProxyModal";
+import { SpawnerSection } from "@/SpawnerSection";
+import { StatusResponseModal } from "@/StatusResponseModal";
+import { Header } from "@/Header";
+import { Button } from "@/ui/button";
 import { Account } from "@/types/account";
 import { Plus, Users, Shield, Box } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/ui/tabs";
 
 const Index = () => {
   const {
