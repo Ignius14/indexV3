@@ -1,8 +1,9 @@
 import { useEffect, useRef, useCallback } from 'react';
 import { Account } from '@/types/account';
 
-const API_URL = 'https://api.donutsmp.net/v1/lookup/';
-const API_KEY = 'Bearer 4a6e3b9b01bc4f5fa7372bc36fc3d764';
+const API_URL =
+  import.meta.env.VITE_API_URL ?? 'http://localhost:3000/v1/lookup/';
+const API_KEY = import.meta.env.VITE_API_KEY ?? '';
 const CHECK_INTERVAL = 10000; // 10 seconds
 
 export interface StatusResponse {
@@ -27,7 +28,7 @@ export function useAccountStatus(
     if (!account.username) return;
     
     const requestUrl = `${API_URL}${encodeURIComponent(account.username)}`;
-    const requestHeaders = { 'Authorization': API_KEY };
+    const requestHeaders = API_KEY ? { Authorization: API_KEY } : {};
     
     try {
       const response = await fetch(requestUrl, {
